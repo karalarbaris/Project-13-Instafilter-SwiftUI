@@ -7,10 +7,38 @@
 
 import SwiftUI
 
+//How property wrappers become structs
+//Creating custom bindings in SwiftUI
+
 struct ContentView: View {
+    
+    @State private var blurAmount : CGFloat = 0
+//    {
+//        didSet {
+//            print(blurAmount)
+//        }
+//    }
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        let blur = Binding<CGFloat>(
+            get: {
+                blurAmount
+            }, set: {
+                blurAmount = $0
+                print("New value is \(blurAmount)")
+            })
+        
+        
+       return VStack {
+            Text("Hello, world!")
+                .blur(radius: blurAmount)
+            
+            Slider(value: blur, in: 0...20)
+
+
+        }
+        
     }
 }
 
