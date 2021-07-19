@@ -7,31 +7,56 @@
 
 import SwiftUI
 
-//Showing multiple options with ActionSheet
+//Wrapping a UIViewController in a SwiftUI view
 
 struct ContentView: View {
     
-    @State private var showingActionSheet = false
-    @State private var backgroundColor = Color.white
+    @State private var image: Image?
+    @State private var showingImagePicker = false
     
     var body: some View {
         
-        Text("Baroo asdasd")
-            .frame(width: 300, height: 300)
-            .background(backgroundColor)
-            .onTapGesture {
-                showingActionSheet = true
+        VStack {
+            image?
+                .resizable()
+                .scaledToFit()
+            
+            Button("Select Image") {
+                showingImagePicker = true
             }
-            .actionSheet(isPresented: $showingActionSheet) {
-                ActionSheet(title: Text("Change background"), message: Text("Select a new color"), buttons: [
-                    .default(Text("Red")) { backgroundColor = .red },
-                    .default(Text("Green")) { backgroundColor = .green },
-                    .default(Text("Blue")) { backgroundColor = .blue }
-                ])
-            }
+        }
+        .sheet(isPresented: $showingImagePicker) {
+            ImagePicker()
+        }
         
     }
 }
+
+////Showing multiple options with ActionSheet
+//
+//struct ContentView: View {
+//
+//    @State private var showingActionSheet = false
+//    @State private var backgroundColor = Color.white
+//
+//    var body: some View {
+//
+//        Text("Baroo asdasd")
+//            .frame(width: 300, height: 300)
+//            .background(backgroundColor)
+//            .onTapGesture {
+//                showingActionSheet = true
+//            }
+//            .actionSheet(isPresented: $showingActionSheet) {
+//                ActionSheet(title: Text("Change background"), message: Text("Select a new color"), buttons: [
+//                    .default(Text("Red")) { backgroundColor = .red },
+//                    .default(Text("Green")) { backgroundColor = .green },
+//                    .default(Text("Blue")) { backgroundColor = .blue }
+//                ])
+//            }
+//
+//    }
+//}
 
 //How property wrappers become structs
 //Creating custom bindings in SwiftUI
