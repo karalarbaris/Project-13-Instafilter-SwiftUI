@@ -7,12 +7,15 @@
 
 import SwiftUI
 
+//Using coordinators to manage SwiftUI view controllers
 //Wrapping a UIViewController in a SwiftUI view
 
 struct ContentView: View {
     
     @State private var image: Image?
     @State private var showingImagePicker = false
+    
+    @State private var inputImage: UIImage?
     
     var body: some View {
         
@@ -25,11 +28,17 @@ struct ContentView: View {
                 showingImagePicker = true
             }
         }
-        .sheet(isPresented: $showingImagePicker) {
-            ImagePicker()
+        .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
+            ImagePicker(image: $inputImage)
         }
         
     }
+    
+    func loadImage() {
+        guard let inputImage = inputImage else { return }
+        image = Image(uiImage: inputImage)
+    }
+    
 }
 
 ////Showing multiple options with ActionSheet
