@@ -63,6 +63,15 @@ struct ContentView: View {
                     
                     Button("Save") {
                         //save the picture
+                        guard let inputImage = inputImage else { return }
+                        let imageSaver = ImageSaver()
+                        imageSaver.successHandler = {
+                            print("Successssss")
+                        }
+                        imageSaver.errorHandler = {
+                            print("oopps: \($0.localizedDescription)")
+                        }
+                        imageSaver.writeToPhotoAlbum(image: inputImage)
                     }
                 }
                 

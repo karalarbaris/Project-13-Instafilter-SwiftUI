@@ -13,6 +13,7 @@
 		1570CB7E26A4110E005015CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1570CB7D26A4110E005015CF /* Preview Assets.xcassets */; };
 		1570CB8626A592A0005015CF /* ImagePickerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1570CB8526A592A0005015CF /* ImagePickerEx.swift */; };
 		1570CB8826AB32C8005015CF /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1570CB8726AB32C8005015CF /* ImagePicker.swift */; };
+		1570CB8A26AB40D4005015CF /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1570CB8926AB40D4005015CF /* ImageSaver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1570CB7F26A4110E005015CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1570CB8526A592A0005015CF /* ImagePickerEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerEx.swift; sourceTree = "<group>"; };
 		1570CB8726AB32C8005015CF /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		1570CB8926AB40D4005015CF /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				1570CB7A26A4110E005015CF /* Assets.xcassets */,
 				1570CB7F26A4110E005015CF /* Info.plist */,
 				1570CB7C26A4110E005015CF /* Preview Content */,
+				1570CB8926AB40D4005015CF /* ImageSaver.swift */,
 			);
 			path = "Project-13-Instafilter-SwiftUI";
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			files = (
 				1570CB8626A592A0005015CF /* ImagePickerEx.swift in Sources */,
 				1570CB8826AB32C8005015CF /* ImagePicker.swift in Sources */,
+				1570CB8A26AB40D4005015CF /* ImageSaver.swift in Sources */,
 				1570CB7926A4110A005015CF /* ContentView.swift in Sources */,
 				1570CB7726A4110A005015CF /* Project_13_Instafilter_SwiftUIApp.swift in Sources */,
 			);
