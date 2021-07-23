@@ -11,7 +11,8 @@
 		1570CB7926A4110A005015CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1570CB7826A4110A005015CF /* ContentView.swift */; };
 		1570CB7B26A4110E005015CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1570CB7A26A4110E005015CF /* Assets.xcassets */; };
 		1570CB7E26A4110E005015CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1570CB7D26A4110E005015CF /* Preview Assets.xcassets */; };
-		1570CB8626A592A0005015CF /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1570CB8526A592A0005015CF /* ImagePicker.swift */; };
+		1570CB8626A592A0005015CF /* ImagePickerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1570CB8526A592A0005015CF /* ImagePickerEx.swift */; };
+		1570CB8826AB32C8005015CF /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1570CB8726AB32C8005015CF /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +22,8 @@
 		1570CB7A26A4110E005015CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1570CB7D26A4110E005015CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1570CB7F26A4110E005015CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1570CB8526A592A0005015CF /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		1570CB8526A592A0005015CF /* ImagePickerEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerEx.swift; sourceTree = "<group>"; };
+		1570CB8726AB32C8005015CF /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +58,8 @@
 			children = (
 				1570CB7626A4110A005015CF /* Project_13_Instafilter_SwiftUIApp.swift */,
 				1570CB7826A4110A005015CF /* ContentView.swift */,
-				1570CB8526A592A0005015CF /* ImagePicker.swift */,
+				1570CB8726AB32C8005015CF /* ImagePicker.swift */,
+				1570CB8526A592A0005015CF /* ImagePickerEx.swift */,
 				1570CB7A26A4110E005015CF /* Assets.xcassets */,
 				1570CB7F26A4110E005015CF /* Info.plist */,
 				1570CB7C26A4110E005015CF /* Preview Content */,
@@ -141,7 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1570CB8626A592A0005015CF /* ImagePicker.swift in Sources */,
+				1570CB8626A592A0005015CF /* ImagePickerEx.swift in Sources */,
+				1570CB8826AB32C8005015CF /* ImagePicker.swift in Sources */,
 				1570CB7926A4110A005015CF /* ContentView.swift in Sources */,
 				1570CB7726A4110A005015CF /* Project_13_Instafilter_SwiftUIApp.swift in Sources */,
 			);

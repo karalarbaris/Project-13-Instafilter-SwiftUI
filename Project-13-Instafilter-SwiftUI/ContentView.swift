@@ -8,17 +8,23 @@
 import SwiftUI
 
 //Building our basic UI
+//Importing an image into SwiftUI using UIImagePickerController
 
 struct ContentView: View {
     
     @State private var image: Image?
     @State private var filterIntensity = 0.5
     
+    @State private var showingImagePicker = false
+    @State private var inputImage: UIImage?
+    
     var body: some View {
         
         
         NavigationView {
             VStack {
+                
+                
                 ZStack {
                     Rectangle()
                         .fill(Color.secondary)
@@ -37,13 +43,16 @@ struct ContentView: View {
                 }
                 .onTapGesture {
                     //select an image
+                    showingImagePicker = true
                 }
+                
                 
                 HStack {
                     Text("Intensity")
                     Slider(value: $filterIntensity)
                 }
                 .padding()
+                
                 
                 HStack {
                     Button("Change Filter") {
@@ -60,8 +69,16 @@ struct ContentView: View {
             }
             .padding([.horizontal, .bottom])
             .navigationTitle("App Name")
+            .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
+                ImagePicker(image: $inputImage)
+            }
         }
         
+    }
+    
+    func loadImage() {
+        guard let inputImage = inputImage else { return }
+        image = Image(uiImage: inputImage)
     }
     
 }
@@ -96,7 +113,7 @@ struct ContentView_Previews: PreviewProvider {
 //            }
 //        }
 //        .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
-//            ImagePicker(image: $inputImage)
+//            ImagePickerEx(image: $inputImage)
 //        }
 //
 //    }
